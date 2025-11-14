@@ -12,3 +12,4 @@ C:\Users\GabrielAlexandreNasc\source\repos\Fase5\obj\Debug\net8.0\refint\Fase5.d
 C:\Users\GabrielAlexandreNasc\source\repos\Fase5\obj\Debug\net8.0\Fase5.pdb
 C:\Users\GabrielAlexandreNasc\source\repos\Fase5\obj\Debug\net8.0\Fase5.genruntimeconfig.cache
 C:\Users\GabrielAlexandreNasc\source\repos\Fase5\obj\Debug\net8.0\ref\Fase5.dll
+C:\Users\GabrielAlexandreNasc\source\repos\Fase5\obj\Debug\net8.0\Fase5.sourcelink.json
