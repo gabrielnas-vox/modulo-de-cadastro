@@ -11,10 +11,16 @@ List<Pedido> pedidosCadastrados = new List<Pedido>();
 
 int opcao;
 
-String nome; // esse nome serve para todas as entidades
+string nome; // esse nome serve para todas as entidades
 
-String endereco;
-String cpf;
+// Variáveis para cadastro do CLIENTE
+string endereco;
+string cpf;
+
+// Variáveis para cadastro do PRODUTO
+int quantidadeEstoque;
+string categoria;
+string descricao;
 
 while(true)
 {
@@ -48,8 +54,23 @@ while(true)
             Console.WriteLine("Cliente novo cadastrado!");
 
             break;
-        case 2: 
-            Console.WriteLine();
+        case 2:
+            Console.WriteLine("Digite o nome do produto: ");
+            nome = Console.ReadLine();
+
+            Console.WriteLine("Quantos deste produto tem em estoque: ");
+            quantidadeEstoque = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite a categoria do produto (Eletrodoméstico, higiene, aparelho...): ");
+            categoria = Console.ReadLine();
+
+            Console.WriteLine("Digite a descrição do produto: ");
+            descricao = Console.ReadLine();
+
+            produtosCadastrados.Add(
+                funcoesProduto.CriarProduto(nome, quantidadeEstoque, categoria, descricao)
+            );
+
             break;
         case 3: 
             Console.WriteLine();
@@ -69,7 +90,19 @@ while(true)
 
             break;
         case 5:
-            Console.WriteLine();
+            Console.WriteLine("Produtos cadastrados no sistema: ");
+            for (int i = 0; i < produtosCadastrados.Count(); i++)
+            {
+                Console.WriteLine(
+                    "===\n" +
+                    $"Produto: {produtosCadastrados[i].NomeProduto}\n" +
+                    $"Quantidade disponível em estoque: {produtosCadastrados[i].QuantidadeEstoque}\n" +
+                    $"Categoria: {produtosCadastrados[i].Categoria}\n" +
+                    $"Descrição detalhada do produto: {produtosCadastrados[i].Descricao}\n" +
+                    "===\n"
+                );
+            }
+
             break;
     }
 }
