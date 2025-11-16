@@ -12,12 +12,18 @@ namespace Fase5.Services
         FuncoesCliente funcoesCliente = new FuncoesCliente();
         FuncoesProduto funcoesProduto = new FuncoesProduto();
         FuncoesPedido funcoesPedido = new FuncoesPedido();
+        FuncoesUsuario funcoesUsuario = new FuncoesUsuario();
 
         List<Cliente> clientesCadastrados = new List<Cliente>();
         List<Produto> produtosCadastrados = new List<Produto>();
         List<Pedido> pedidosCadastrados = new List<Pedido>();
+        Usuario dadosUsuario = new Usuario();
 
         string nome; // esse nome serve para todas as entidades
+
+        // váriaveis para cadastro do USUÁRIO
+        string email;
+        string senha;
 
         // Variáveis para cadastro do CLIENTE
         string endereco;
@@ -33,6 +39,31 @@ namespace Fase5.Services
         int produtoComprado;
         DateOnly estimativaEntrega;
         string formaPagamento;
+
+        public void cadastroUsuario()
+        {
+            bool? cadastrado = null;
+
+            while(cadastrado == null)
+            {
+                Console.WriteLine("Informe seu nome de usuário: ");
+                this.nome = Console.ReadLine();
+
+                Console.WriteLine("Informe seu e-mail: ");
+                this.email = Console.ReadLine();
+
+                Console.WriteLine("Informe sua senha: ");
+                this.senha = Console.ReadLine();
+
+                dadosUsuario = funcoesUsuario.cadastro(email, senha, nome);
+
+                if(dadosUsuario.Email != null)
+                {
+                    cadastrado = true;
+                }
+            }
+            
+        }
 
         public void cadastroCliente()
         {

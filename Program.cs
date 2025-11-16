@@ -1,7 +1,6 @@
 ﻿using Fase5.Classes;
 using Fase5.Services;
 
-FuncoesUsuario funcoesUsuario = new FuncoesUsuario();
 FuncoesMenu menu = new FuncoesMenu();
 
 int opcao;
@@ -30,7 +29,7 @@ while(true)
     switch(opcao)
     {
         case 1:
-
+            menu.cadastroUsuario();
             break;
         case 2:
 

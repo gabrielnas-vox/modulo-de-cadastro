@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "6T76a7E7RxM=",
+  "dgSpecHash": "I0WZ39Vthw8=",
   "success": true,
   "projectFilePath": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Fase5.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\GabrielAlexandreNasc\\.nuget\\packages\\mstest.analyzers\\4.0.2\\mstest.analyzers.4.0.2.nupkg.sha512",
+    "C:\\Users\\GabrielAlexandreNasc\\.nuget\\packages\\mstest.testframework\\4.0.2\\mstest.testframework.4.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
