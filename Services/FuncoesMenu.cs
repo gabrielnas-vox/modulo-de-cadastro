@@ -9,34 +9,122 @@ namespace Fase5.Services
 {
     internal class FuncoesMenu
     {
-        public void listarClientes(List<Cliente> clientes)
+        FuncoesCliente funcoesCliente = new FuncoesCliente();
+        FuncoesProduto funcoesProduto = new FuncoesProduto();
+        FuncoesPedido funcoesPedido = new FuncoesPedido();
+
+        List<Cliente> clientesCadastrados = new List<Cliente>();
+        List<Produto> produtosCadastrados = new List<Produto>();
+        List<Pedido> pedidosCadastrados = new List<Pedido>();
+
+        string nome; // esse nome serve para todas as entidades
+
+        // Variáveis para cadastro do CLIENTE
+        string endereco;
+        string cpf;
+
+        // Variáveis para cadastro do PRODUTO
+        int quantidadeEstoque;
+        string categoria;
+        string descricao;
+
+        // Variáveis para cadastro do PEDIDO
+        int clienteQueComprou;
+        int produtoComprado;
+        DateOnly estimativaEntrega;
+        string formaPagamento;
+
+        public void cadastroCliente()
+        {
+            Console.WriteLine("Qual é o nome do cliente: ");
+            this.nome = Console.ReadLine();
+
+            Console.WriteLine("Qual é o endereço do cliente: ");
+            this.endereco = Console.ReadLine();
+
+            Console.WriteLine("Qual é o CPF do cliente: ");
+            this.cpf = Console.ReadLine();
+
+            clientesCadastrados.Add(
+                funcoesCliente.CadastrarCliente(this.nome, this.endereco, this.cpf)
+            );
+
+            Console.WriteLine("Cliente novo cadastrado!");
+        }
+
+        public void cadastroProduto()
+        {
+            Console.WriteLine("Digite o nome do produto: ");
+            nome = Console.ReadLine();
+
+            Console.WriteLine("Quantos deste produto tem em estoque: ");
+            quantidadeEstoque = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite a categoria do produto (Eletrodoméstico, higiene, aparelho...): ");
+            categoria = Console.ReadLine();
+
+            Console.WriteLine("Digite a descrição do produto: ");
+            descricao = Console.ReadLine();
+
+            produtosCadastrados.Add(
+                funcoesProduto.CriarProduto(nome, quantidadeEstoque, categoria, descricao)
+            );
+        }
+
+        public void cadastroPedido()
+        {
+            Console.WriteLine("-- Gerar pedido de compra --");
+
+            this.listarClientes();
+
+            Console.Write("Selecione o ID do cliente: ");
+            this.clienteQueComprou = int.Parse(Console.ReadLine());
+
+            Console.Write("Selecione o ID do produto: ");
+            this.produtoComprado = int.Parse(Console.ReadLine());
+
+            Console.Write("Qual será a estimativa de entrega (Ano/Mês/dias): ");
+            this.estimativaEntrega = DateOnly.Parse(Console.ReadLine());
+
+            Console.Write("Qual será a forma de pagamento: ");
+            this.formaPagamento = Console.ReadLine();
+
+            pedidosCadastrados.Add(funcoesPedido.gerarPedido(
+                this.clientesCadastrados[clienteQueComprou],
+                this.produtosCadastrados[produtoComprado],
+                this.estimativaEntrega,
+                this.formaPagamento
+            ));
+        }
+
+        public void listarClientes()
         {
             Console.WriteLine("-- Lista de clientes cadastrados e seus pedidos --");
-            for (int i = 0; i < clientes.Count(); i++)
+            for (int i = 0; i < this.clientesCadastrados.Count(); i++)
             {
                 Console.WriteLine(
                     "===\n" +
                     $"Id do cliente: {i}\n" +
-                    $"Nome: {clientes[i].Nome}\n" +
-                    $"Endereço: {clientes[i].Endereco}\n" +
-                    $"Endereço: {clientes[i].Cpf}\n" +
+                    $"Nome: {this.clientesCadastrados[i].Nome}\n" +
+                    $"Endereço: {this.clientesCadastrados[i].Endereco}\n" +
+                    $"Endereço: {this.clientesCadastrados[i].Cpf}\n" +
                     "===\n"
                 );
             }
         }
 
-        public void listarProdutos(List<Produto> produtos)
+        public void listarProdutos()
         {
             Console.WriteLine("-- Produtos cadastrados no sistema --");
-            for (int i = 0; i < produtos.Count(); i++)
+            for (int i = 0; i < this.produtosCadastrados.Count(); i++)
             {
                 Console.WriteLine(
                     "===\n" +
                     $"Id do produto: {i}\n" +
-                    $"Produto: {produtos[i].NomeProduto}\n" +
-                    $"Quantidade disponível em estoque: {produtos[i].QuantidadeEstoque}\n" +
-                    $"Categoria: {produtos[i].Categoria}\n" +
-                    $"Descrição detalhada do produto: {produtos[i].Descricao}\n" +
+                    $"Produto: {this.produtosCadastrados[i].NomeProduto}\n" +
+                    $"Quantidade disponível em estoque: {this.produtosCadastrados[i].QuantidadeEstoque}\n" +
+                    $"Categoria: {this.produtosCadastrados[i].Categoria}\n" +
+                    $"Descrição detalhada do produto: {this.produtosCadastrados[i].Descricao}\n" +
                     "===\n"
                 );
             }
