@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Services\\FuncoesCliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\FuncoesCliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Models\\Produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Services\\FuncoesMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\FuncoesMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,17 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAwwD0AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAD8AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-14T20:28:08.164Z",
               "EditorCaption": ""
@@ -36,14 +40,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Produto.cs",
-              "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Models\\Produto.cs",
-              "RelativeDocumentMoniker": "Models\\Produto.cs",
-              "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Models\\Produto.cs",
-              "RelativeToolTip": "Models\\Produto.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "FuncoesMenu.cs",
+              "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Services\\FuncoesMenu.cs",
+              "RelativeDocumentMoniker": "Services\\FuncoesMenu.cs",
+              "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Services\\FuncoesMenu.cs",
+              "RelativeToolTip": "Services\\FuncoesMenu.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACIAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:03:31.741Z",
+              "WhenOpened": "2025-11-16T12:52:49.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FuncoesCliente.cs",
+              "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Services\\FuncoesCliente.cs",
+              "RelativeDocumentMoniker": "Services\\FuncoesCliente.cs",
+              "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Services\\FuncoesCliente.cs",
+              "RelativeToolTip": "Services\\FuncoesCliente.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T12:40:05.529Z",
               "EditorCaption": ""
             }
           ]

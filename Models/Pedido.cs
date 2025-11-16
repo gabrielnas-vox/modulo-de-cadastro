@@ -13,6 +13,7 @@ namespace Fase5.Classes
         private string formaPagamento;
         Cliente cliente;
         Produto produto;
+
         public Pedido(int id, Cliente cliente, Produto produto, DateOnly estimativa, string formaPagamento) 
         {
             this.cliente = cliente;

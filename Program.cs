@@ -4,6 +4,7 @@ using Fase5.Services;
 FuncoesCliente funcoesCliente = new FuncoesCliente();
 FuncoesProduto funcoesProduto = new FuncoesProduto();
 FuncoesPedido funcoesPedido = new FuncoesPedido();
+FuncoesMenu menu = new FuncoesMenu();
 
 List<Cliente> clientesCadastrados = new List<Cliente>();
 List<Produto> produtosCadastrados = new List<Produto>();
@@ -21,6 +22,12 @@ string cpf;
 int quantidadeEstoque;
 string categoria;
 string descricao;
+
+//Variáveis para cadastro do PEDIDO
+int clienteQueComprou;
+int produtoComprado;
+DateOnly estimativaEntrega;
+string formaPagamento;
 
 while(true)
 {
@@ -72,37 +79,36 @@ while(true)
             );
 
             break;
-        case 3: 
-            Console.WriteLine();
+        case 3:
+            Console.WriteLine("-- Gerar pedido de compra --");
+
+            menu.listarClientes(clientesCadastrados);
+
+            Console.Write("Selecione o ID do cliente: ");
+            clienteQueComprou = int.Parse(Console.ReadLine());
+
+            Console.Write("Selecione o ID do produto: ");
+            produtoComprado = int.Parse(Console.ReadLine());
+
+            Console.Write("Qual será a estimativa de entrega (Ano/Mês/dias): ");
+            estimativaEntrega = DateOnly.Parse(Console.ReadLine());
+
+            Console.Write("Qual será a forma de pagamento: ");
+            formaPagamento = Console.ReadLine();
+
+            pedidosCadastrados.Add(funcoesPedido.gerarPedido(
+                clientesCadastrados[clienteQueComprou],
+                produtosCadastrados[produtoComprado],
+                estimativaEntrega,
+                formaPagamento
+            ));
+
             break;
         case 4:
-            Console.WriteLine("Lista de clientes cadastrados e seus pedidos: ");
-            for(int i = 0; i < clientesCadastrados.Count(); i++)
-            {
-                Console.WriteLine(
-                    "===" +
-                    $"Nome: {clientesCadastrados[i].Nome}\n" +
-                    $"Endereço: {clientesCadastrados[i].Endereco}\n" +
-                    $"Endereço: {clientesCadastrados[i].Cpf}\n" +
-                    "==="
-                );
-            }
-
+            menu.listarClientes(clientesCadastrados);
             break;
         case 5:
-            Console.WriteLine("Produtos cadastrados no sistema: ");
-            for (int i = 0; i < produtosCadastrados.Count(); i++)
-            {
-                Console.WriteLine(
-                    "===\n" +
-                    $"Produto: {produtosCadastrados[i].NomeProduto}\n" +
-                    $"Quantidade disponível em estoque: {produtosCadastrados[i].QuantidadeEstoque}\n" +
-                    $"Categoria: {produtosCadastrados[i].Categoria}\n" +
-                    $"Descrição detalhada do produto: {produtosCadastrados[i].Descricao}\n" +
-                    "===\n"
-                );
-            }
-
+            menu.listarProdutos(produtosCadastrados);
             break;
     }
 }

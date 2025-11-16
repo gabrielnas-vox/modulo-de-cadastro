@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Models"
+    "\\Models",
+    "\\Services"
   ],
-  "SelectedNode": "\\Program.cs",
+  "SelectedNode": "\\Services\\FuncoesCliente.cs",
   "PreviewInSolutionExplorer": false
 }
