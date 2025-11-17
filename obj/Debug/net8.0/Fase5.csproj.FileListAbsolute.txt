@@ -46,3 +46,7 @@ C:\Users\GabrielAlexandreNasc\source\repos\Fase 5\bin\Debug\net8.0\zh-Hant\MSTes
 C:\Users\GabrielAlexandreNasc\source\repos\Fase 5\bin\Debug\net8.0\MSTest.TestFramework.Extensions.dll
 C:\Users\GabrielAlexandreNasc\source\repos\Fase 5\bin\Debug\net8.0\MSTest.TestFramework.Extensions.xml
 C:\Users\GabrielAlexandreNasc\source\repos\Fase 5\obj\Debug\net8.0\Fase5.csproj.Up2Date
+C:\Users\GabrielAlexandreNasc\source\repos\Fase 5\bin\Debug\net8.0\xunit.assert.dll
+C:\Users\GabrielAlexandreNasc\source\repos\Fase 5\bin\Debug\net8.0\Bogus.dll
+C:\Users\GabrielAlexandreNasc\source\repos\Fase 5\bin\Debug\net8.0\xunit.abstractions.dll
+C:\Users\GabrielAlexandreNasc\source\repos\Fase 5\bin\Debug\net8.0\xunit.core.dll

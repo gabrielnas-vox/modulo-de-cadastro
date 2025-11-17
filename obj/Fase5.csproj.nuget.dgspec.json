@@ -50,9 +50,21 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Bogus": {
+              "target": "Package",
+              "version": "[35.6.5, )"
+            },
             "MSTest.TestFramework": {
               "target": "Package",
               "version": "[4.0.2, )"
+            },
+            "xunit.assert": {
+              "target": "Package",
+              "version": "[2.9.3, )"
+            },
+            "xunit.extensibility.core": {
+              "target": "Package",
+              "version": "[2.9.3, )"
             }
           },
           "imports": [

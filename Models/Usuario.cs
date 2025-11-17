@@ -26,8 +26,12 @@ namespace Fase5.Classes
             this.username = username;
         }
 
+        public override string ToString()
+        {
+            return $"Email = {this.email}";
+        }
         public int Id { get { return idUsuario; } }
-        public string Email { get { return email; } }
+        public string Email { get; set; }
         public string Senha { get { return senha; } }
         public string Username { get { return username; } }
     }

@@ -51,6 +51,7 @@ namespace Fase5.Services
             }
         }
 
+        [TestMethod]
         public void DeletarProdutoPorNome(List<Produto> produtos, string nome)
         {
             if(produtos.Count > 0)

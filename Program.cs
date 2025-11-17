@@ -1,7 +1,12 @@
 ﻿using Fase5.Classes;
 using Fase5.Services;
+using Fase5.Testes;
+using System.Collections.Generic;
 
 FuncoesMenu menu = new FuncoesMenu();
+
+TestesUsuario testeUsuario = new TestesUsuario();
+testeUsuario.testarCadastro();
 
 int opcao;
 
