@@ -39,15 +39,12 @@ while(true)
             break;
         case 4:
             menu.cadastroCliente();
-
             break;
         case 5:
             menu.cadastroProduto();
-
             break;
         case 6:
             menu.cadastroPedido();
-
             break;
         case 7:
             menu.listarClientes();

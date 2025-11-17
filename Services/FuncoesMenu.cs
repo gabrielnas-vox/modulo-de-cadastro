@@ -78,7 +78,7 @@ namespace Fase5.Services
                 Console.WriteLine("Informe sua senha: ");
                 this.senha = Console.ReadLine();
 
-                dadosLogin = funcoesUsuario.login(new Login(this.email, this.senha), new Login(dadosCadastro.Id, dadosCadastro.Email, dadosCadastro.Senha));
+                dadosLogin = funcoesUsuario.login(new Login(this.email, this.senha), new Login(dadosCadastro.Id, dadosCadastro.Email, dadosCadastro.Senha, dadosCadastro.Username));
 
                 if(dadosLogin != null)
                 {

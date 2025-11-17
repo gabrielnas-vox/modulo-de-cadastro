@@ -44,7 +44,7 @@ namespace Fase5.Services
             {
                 if(dadosLogin.senha == dadosCadastrados.senha)
                 {
-                    Console.WriteLine(dadosLogin);
+                    Console.WriteLine($"Login realizado com sucesso. Seja bem-vindo, {dadosCadastrados.username}!");
 
                     return new Login(dadosCadastrados.username);
                 } else
