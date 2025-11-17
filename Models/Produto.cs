@@ -9,23 +9,23 @@ namespace Fase5.Classes
     internal class Produto
     {
         private int idProduto;
-        private string nomeProduto;
+        public string nomeProduto;
         private int quantidadeEstoque;
-        private string categoria;
-        private string descricao;
+        public string categoria;
+        public string descricao;
+        public double preco;
 
-        public Produto(int idProduto, string nomeProduto, int quantidadeEstoque, string categoria, string descricao)
+        public Produto(int idProduto, string nomeProduto, int quantidadeEstoque, string categoria, string descricao, double preco)
         {
             this.idProduto = idProduto;
-            this.NomeProduto = nomeProduto;
+            this.nomeProduto = nomeProduto;
             this.QuantidadeEstoque = quantidadeEstoque;
-            this.Categoria = categoria;
-            this.Descricao = descricao;
+            this.categoria = categoria;
+            this.descricao = descricao;
+            this.preco = preco;
         }
 
-        public string NomeProduto { get; set; }
+        public int Id { get; set; }
         public int QuantidadeEstoque { get; set; }
-        public string Categoria { get; set; }
-        public string Descricao { get; set; }
     }
 }

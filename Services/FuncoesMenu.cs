@@ -18,6 +18,7 @@ namespace Fase5.Services
         List<Cliente> clientesCadastrados = new List<Cliente>();
         List<Produto> produtosCadastrados = new List<Produto>();
         List<Pedido> pedidosCadastrados = new List<Pedido>();
+
         Usuario dadosCadastro = new Usuario();
         Login dadosLogin;
 
@@ -36,6 +37,7 @@ namespace Fase5.Services
         int quantidadeEstoque;
         string categoria;
         string descricao;
+        double preco;
 
         // Variáveis para cadastro do PEDIDO
         int clienteQueComprou;
@@ -136,8 +138,11 @@ namespace Fase5.Services
             Console.WriteLine("Digite a descrição do produto: ");
             descricao = Console.ReadLine();
 
+            Console.WriteLine("Informe o preço do produto: ");
+            preco = double.Parse(Console.ReadLine());
+
             produtosCadastrados.Add(
-                funcoesProduto.CriarProduto(nome, quantidadeEstoque, categoria, descricao)
+                funcoesProduto.CriarProduto(nome, quantidadeEstoque, categoria, descricao, preco)
             );
         }
 
@@ -191,12 +196,34 @@ namespace Fase5.Services
                 Console.WriteLine(
                     "===\n" +
                     $"Id do produto: {i}\n" +
-                    $"Produto: {this.produtosCadastrados[i].NomeProduto}\n" +
+                    $"Produto: {this.produtosCadastrados[i].nomeProduto}\n" +
                     $"Quantidade disponível em estoque: {this.produtosCadastrados[i].QuantidadeEstoque}\n" +
-                    $"Categoria: {this.produtosCadastrados[i].Categoria}\n" +
-                    $"Descrição detalhada do produto: {this.produtosCadastrados[i].Descricao}\n" +
+                    $"Categoria: {this.produtosCadastrados[i].categoria}\n" +
+                    $"Descrição detalhada do produto: {this.produtosCadastrados[i].descricao}\n" +
                     "===\n"
                 );
+            }
+        }
+
+        public void deletarProduto()
+        {
+            Console.WriteLine("Deseja deletar produto por ID (1) ou por nome (2): ");
+            int opcao = int.Parse(Console.ReadLine());
+
+            switch(opcao)
+            {
+                case 1:
+                    Console.WriteLine("Informe o ID do produto: ");
+                    int id = int.Parse(Console.ReadLine());
+
+                    funcoesProduto.DeletarProdutoPorID(produtosCadastrados, id);
+                    break;
+                case 2:
+                    Console.WriteLine("Informe o nome do produto: ");
+                    string nome = Console.ReadLine();
+
+                    funcoesProduto.DeletarProdutoPorNome(produtosCadastrados, nome);
+                    break;
             }
         }
     }

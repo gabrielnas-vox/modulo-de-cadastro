@@ -11,6 +11,7 @@ namespace Fase5.Classes
         private int idPedido;
         private DateOnly estimativaEntrega;
         private string formaPagamento;
+        private string desconto;
         Cliente cliente;
         Produto produto;
 

@@ -22,6 +22,7 @@ while(true)
 
     Console.WriteLine("7 - Visualizar clientes");
     Console.WriteLine("8 - Visualizar produtos");
+    Console.WriteLine("9 - Deletar produto(s)");
     Console.WriteLine("==================");
 
     opcao = int.Parse(Console.ReadLine());
@@ -52,5 +53,9 @@ while(true)
         case 8:
             menu.listarProdutos();
             break;
+        case 9:
+            menu.deletarProduto();
+            break;
+
     }
 }
