@@ -26,6 +26,7 @@ namespace Fase5.Classes
             this.username = username;
         }
 
+        public int Id { get { return idUsuario; } }
         public string Email { get { return email; } }
         public string Senha { get { return senha; } }
         public string Username { get { return username; } }

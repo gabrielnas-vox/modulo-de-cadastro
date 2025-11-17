@@ -78,15 +78,29 @@ namespace Fase5.Services
                 Console.WriteLine("Informe sua senha: ");
                 this.senha = Console.ReadLine();
 
-                dadosLogin = funcoesUsuario.login(new Login(this.email, this.senha), new Login(dadosCadastro.Email, dadosCadastro.Senha));
+                dadosLogin = funcoesUsuario.login(new Login(this.email, this.senha), new Login(dadosCadastro.Id, dadosCadastro.Email, dadosCadastro.Senha));
 
                 if(dadosLogin != null)
                 {
-                    estaLogado = true;
+                    this.estaLogado = true;
                 }
             } else
             {
-                Console.WriteLine("Você já está logado. Se deseja entrar com uma conta diferente, selecione a opção 3 e faça o logout.");
+                Console.WriteLine($"Você já está logado como {dadosLogin.username}. Se deseja entrar com uma conta diferente, selecione a opção 3 e faça o logout.");
+            }
+        }
+
+        public void logout()
+        {
+            if(!estaLogado)
+            {
+                Console.WriteLine("Você não está logado!");
+            } else
+            {
+                this.dadosLogin = null;
+                this.estaLogado = false;
+
+                Console.WriteLine("Feito logout da sua conta. Para logar-se novamente, digite a opção 2!");
             }
         }
 

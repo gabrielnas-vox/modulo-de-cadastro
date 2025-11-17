@@ -35,7 +35,7 @@ while(true)
             menu.fazerLogin();
             break;
         case 3:
-
+            menu.logout();
             break;
         case 4:
             menu.cadastroCliente();
