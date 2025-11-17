@@ -1,4 +1,5 @@
 using Fase5.Classes;
+using Fase5.Records;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 
@@ -27,6 +28,37 @@ namespace Fase5.Services
 
             Usuario usuarioCadastrado = new Usuario(idAtual++, email, senha, username);
             return usuarioCadastrado;
+        }
+
+        [TestMethod]
+        public Login login(Login dadosLogin, Login dadosCadastrados)
+        {
+            if(dadosLogin.email == null || dadosLogin.senha == null)
+            {
+                Console.WriteLine("Os campos devem ser preenchidos!");
+
+                return null;
+            }
+
+            if(dadosLogin.email == dadosCadastrados.email)
+            {
+                if(dadosLogin.senha == dadosCadastrados.senha)
+                {
+                    Console.WriteLine("Login realizado com sucesso!");
+
+                    return dadosCadastrados;
+                } else
+                {
+                    Console.WriteLine("Senha incorreta, tente novamente.");
+
+                    return null;
+                }
+            } else
+            {
+                Console.WriteLine("E-mail não encontrado, tente novamente.");
+
+                return null;
+            }
         }
     }
 }

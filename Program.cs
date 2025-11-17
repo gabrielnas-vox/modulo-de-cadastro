@@ -32,7 +32,7 @@ while(true)
             menu.cadastroUsuario();
             break;
         case 2:
-
+            menu.fazerLogin();
             break;
         case 3:
 

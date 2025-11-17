@@ -1,4 +1,5 @@
 using Fase5.Classes;
+using Fase5.Records;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,13 +18,15 @@ namespace Fase5.Services
         List<Cliente> clientesCadastrados = new List<Cliente>();
         List<Produto> produtosCadastrados = new List<Produto>();
         List<Pedido> pedidosCadastrados = new List<Pedido>();
-        Usuario dadosUsuario = new Usuario();
+        Usuario dadosCadastro = new Usuario();
+        Login dadosLogin;
 
         string nome; // esse nome serve para todas as entidades
 
-        // váriaveis para cadastro do USUÁRIO
+        // váriaveis para cadastro e login do USUÁRIO
         string email;
         string senha;
+        bool estaLogado = false;
 
         // Variáveis para cadastro do CLIENTE
         string endereco;
@@ -55,14 +58,25 @@ namespace Fase5.Services
                 Console.WriteLine("Informe sua senha: ");
                 this.senha = Console.ReadLine();
 
-                dadosUsuario = funcoesUsuario.cadastro(email, senha, nome);
+                dadosCadastro = funcoesUsuario.cadastro(email, senha, nome);
 
-                if(dadosUsuario.Email != null)
+                if(dadosCadastro.Email != null)
                 {
                     cadastrado = true;
                 }
             }
             
+        }
+
+        public void fazerLogin()
+        {
+            Console.WriteLine("Informe seu e-mail: ");
+            this.email = Console.ReadLine();
+
+            Console.WriteLine("Informe sua senha: ");
+            this.senha = Console.ReadLine();
+
+            dadosLogin = funcoesUsuario.login(new Login(this.email, this.senha), new Login(dadosCadastro.Email, dadosCadastro.Senha));
         }
 
         public void cadastroCliente()
