@@ -65,18 +65,29 @@ namespace Fase5.Services
                     cadastrado = true;
                 }
             }
-            
+        
         }
 
         public void fazerLogin()
         {
-            Console.WriteLine("Informe seu e-mail: ");
-            this.email = Console.ReadLine();
+            if(!estaLogado)
+            {
+                Console.WriteLine("Informe seu e-mail: ");
+                this.email = Console.ReadLine();
 
-            Console.WriteLine("Informe sua senha: ");
-            this.senha = Console.ReadLine();
+                Console.WriteLine("Informe sua senha: ");
+                this.senha = Console.ReadLine();
 
-            dadosLogin = funcoesUsuario.login(new Login(this.email, this.senha), new Login(dadosCadastro.Email, dadosCadastro.Senha));
+                dadosLogin = funcoesUsuario.login(new Login(this.email, this.senha), new Login(dadosCadastro.Email, dadosCadastro.Senha));
+
+                if(dadosLogin != null)
+                {
+                    estaLogado = true;
+                }
+            } else
+            {
+                Console.WriteLine("Você já está logado. Se deseja entrar com uma conta diferente, selecione a opção 3 e faça o logout.");
+            }
         }
 
         public void cadastroCliente()
