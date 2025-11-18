@@ -13,6 +13,10 @@ namespace Fase5.Classes
         private string endereco;
         private string cpf;
 
+        public Cliente()
+        {
+            
+        }
         public Cliente(int idCliente, string nome, string endereco,  string cpf)
         {
             this.idCliente = idCliente;
@@ -21,8 +25,8 @@ namespace Fase5.Classes
             this.cpf = cpf;
         }
 
-        public string Nome {  get { return nome; } }
-        public string Endereco { get { return endereco; } }
-        public string Cpf { get { return cpf; } }
+        public string Nome { get; set; }
+        public string Endereco { get; set; }
+        public string Cpf { get; set; }
     }
 }

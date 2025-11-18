@@ -7,14 +7,17 @@ FuncoesMenu menu = new FuncoesMenu();
 
 TestesUsuario testeUsuario = new TestesUsuario();
 TestesProduto testeProduto = new TestesProduto();
+TestesCliente testesCliente = new TestesCliente();
 
 // Teste que realiza com sucesso
 // testeUsuario.testarCadastroSucesso();
 // testeProduto.testarProdutosSucesso();
-testeProduto.testarQuantidadeNegativa();
+// testesCliente.testarCadastroSucesso();
 
 // Teste que falha
 // testeUsuario.testarCadastroFalho();
+// testeProduto.testarQuantidadeNegativaFracasso();
+testesCliente.testarCadastroFracasso();
 
 int opcao;
 
