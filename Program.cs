@@ -11,7 +11,7 @@ TestesProduto testeProduto = new TestesProduto();
 // Teste que realiza com sucesso
 // testeUsuario.testarCadastroSucesso();
 // testeProduto.testarProdutosSucesso();
-testeProduto.testarProdutosFracasso();
+testeProduto.testarQuantidadeNegativa();
 
 // Teste que falha
 // testeUsuario.testarCadastroFalho();

@@ -40,6 +40,19 @@ namespace Fase5.Testes
             return produtosErrados;
         }
 
+        public Produto produtoQuantidadesErradas()
+        {
+            var produtoFaker = new Faker<Produto>("pt_BR")
+                .RuleFor(c => c.nomeProduto, f => f.Commerce.Product())
+                .RuleFor(c => c.QuantidadeEstoque, f => f.Random.Number(-1, 1))
+                .RuleFor(c => c.categoria, f => f.Random.Word())
+                .RuleFor(c => c.descricao, f => f.Random.Words(6))
+                .RuleFor(c => c.preco, f => f.Random.Double(-1, 1));
+
+            var produtoErrado = produtoFaker.Generate(1)[0];
+            return produtoErrado;
+        }
+
         [Fact(DisplayName = "Verificar se os campos não são nulos / Sucesso")]
         public void testarProdutosSucesso()
         {
@@ -71,9 +84,12 @@ namespace Fase5.Testes
         }
 
         [Fact(DisplayName = "Verificar se o preço é maior que zero ou é um valor inválido")]
-        public void testarPrecoNegativo()
+        public void testarQuantidadeNegativaFracasso()
         {
+            Produto produto = produtoQuantidadesErradas();
 
+            Assert.False(produto.QuantidadeEstoque > 0);
+            Assert.False(produto.preco > 0);
         }
     }
 }
