@@ -67,7 +67,6 @@ namespace Fase5.Services
                     cadastrado = true;
                 }
             }
-        
         }
 
         public void fazerLogin()
@@ -80,7 +79,7 @@ namespace Fase5.Services
                 Console.WriteLine("Informe sua senha: ");
                 this.senha = Console.ReadLine();
 
-                dadosLogin = funcoesUsuario.login(new Login(this.email, this.senha), new Login(dadosCadastro.Id, dadosCadastro.Email, dadosCadastro.Senha, dadosCadastro.Username));
+                dadosLogin = funcoesUsuario.login(new Login(this.email, this.senha), new Login(dadosCadastro.Id, dadosCadastro.Email, dadosCadastro.Senha, dadosCadastro.username));
 
                 if(dadosLogin != null)
                 {
@@ -108,123 +107,164 @@ namespace Fase5.Services
 
         public void cadastroCliente()
         {
-            Console.WriteLine("Qual é o nome do cliente: ");
-            this.nome = Console.ReadLine();
+            if(estaLogado)
+            {
+                Console.WriteLine("Qual é o nome do cliente: ");
+                this.nome = Console.ReadLine();
 
-            Console.WriteLine("Qual é o endereço do cliente: ");
-            this.endereco = Console.ReadLine();
+                Console.WriteLine("Qual é o endereço do cliente: ");
+                this.endereco = Console.ReadLine();
 
-            Console.WriteLine("Qual é o CPF do cliente: ");
-            this.cpf = Console.ReadLine();
+                Console.WriteLine("Qual é o CPF do cliente: ");
+                this.cpf = Console.ReadLine();
 
-            clientesCadastrados.Add(
-                funcoesCliente.CadastrarCliente(this.nome, this.endereco, this.cpf)
-            );
+                clientesCadastrados.Add(
+                    funcoesCliente.CadastrarCliente(this.nome, this.endereco, this.cpf)
+                );
 
-            Console.WriteLine("Cliente novo cadastrado!");
+                Console.WriteLine("Cliente novo cadastrado!");
+            } else
+            {
+                Console.WriteLine("Você precisa estar logado para cadastrar um cliente.");
+            }
         }
 
         public void cadastroProduto()
         {
-            Console.WriteLine("Digite o nome do produto: ");
-            nome = Console.ReadLine();
+            if(estaLogado)
+            {
+                Console.WriteLine("Digite o nome do produto: ");
+                nome = Console.ReadLine();
 
-            Console.WriteLine("Quantos deste produto tem em estoque: ");
-            quantidadeEstoque = int.Parse(Console.ReadLine());
+                Console.WriteLine("Quantos deste produto tem em estoque: ");
+                quantidadeEstoque = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Digite a categoria do produto (Eletrodoméstico, higiene, aparelho...): ");
-            categoria = Console.ReadLine();
+                Console.WriteLine("Digite a categoria do produto (Eletrodoméstico, higiene, aparelho...): ");
+                categoria = Console.ReadLine();
 
-            Console.WriteLine("Digite a descrição do produto: ");
-            descricao = Console.ReadLine();
+                Console.WriteLine("Digite a descrição do produto: ");
+                descricao = Console.ReadLine();
 
-            Console.WriteLine("Informe o preço do produto: ");
-            preco = double.Parse(Console.ReadLine());
+                Console.WriteLine("Informe o preço do produto: ");
+                preco = double.Parse(Console.ReadLine());
 
-            produtosCadastrados.Add(
-                funcoesProduto.CriarProduto(nome, quantidadeEstoque, categoria, descricao, preco)
-            );
+                produtosCadastrados.Add(
+                    funcoesProduto.CriarProduto(nome, quantidadeEstoque, categoria, descricao, preco)
+                );
+            } else
+            {
+                Console.WriteLine("Você precisa estar logado para cadastrar um produto.");
+            }
+            
         }
 
         public void cadastroPedido()
         {
-            Console.WriteLine("-- Gerar pedido de compra --");
+            if(estaLogado)
+            {
+                Console.WriteLine("-- Gerar pedido de compra --");
 
-            this.listarClientes();
+                this.listarClientes();
 
-            Console.Write("Selecione o ID do cliente: ");
-            this.clienteQueComprou = int.Parse(Console.ReadLine());
+                Console.Write("Selecione o ID do cliente: ");
+                this.clienteQueComprou = int.Parse(Console.ReadLine());
 
-            Console.Write("Selecione o ID do produto: ");
-            this.produtoComprado = int.Parse(Console.ReadLine());
+                Console.Write("Selecione o ID do produto: ");
+                this.produtoComprado = int.Parse(Console.ReadLine());
 
-            Console.Write("Qual será a estimativa de entrega (Ano/Mês/dias): ");
-            this.estimativaEntrega = DateOnly.Parse(Console.ReadLine());
+                Console.Write("Qual será a estimativa de entrega (Ano/Mês/dias): ");
+                this.estimativaEntrega = DateOnly.Parse(Console.ReadLine());
 
-            Console.Write("Qual será a forma de pagamento: ");
-            this.formaPagamento = Console.ReadLine();
+                Console.Write("Qual será a forma de pagamento: ");
+                this.formaPagamento = Console.ReadLine();
 
-            pedidosCadastrados.Add(funcoesPedido.gerarPedido(
-                this.clientesCadastrados[clienteQueComprou],
-                this.produtosCadastrados[produtoComprado],
-                this.estimativaEntrega,
-                this.formaPagamento
-            ));
+                pedidosCadastrados.Add(funcoesPedido.gerarPedido(
+                    this.clientesCadastrados[clienteQueComprou],
+                    this.produtosCadastrados[produtoComprado],
+                    this.estimativaEntrega,
+                    this.formaPagamento
+                ));
+            } else
+            {
+                Console.WriteLine("Necessário login para cadastrar pedido");
+            }
+            
         }
 
         public void listarClientes()
         {
-            Console.WriteLine("-- Lista de clientes cadastrados e seus pedidos --");
-            for (int i = 0; i < this.clientesCadastrados.Count(); i++)
+            if(estaLogado)
             {
-                Console.WriteLine(
-                    "===\n" +
-                    $"Id do cliente: {i}\n" +
-                    $"Nome: {this.clientesCadastrados[i].Nome}\n" +
-                    $"Endereço: {this.clientesCadastrados[i].Endereco}\n" +
-                    $"Endereço: {this.clientesCadastrados[i].Cpf}\n" +
-                    "===\n"
-                );
+                Console.WriteLine("-- Lista de clientes cadastrados e seus pedidos --");
+                for (int i = 0; i < this.clientesCadastrados.Count(); i++)
+                {
+                    Console.WriteLine(
+                        "===\n" +
+                        $"Id do cliente: {i}\n" +
+                        $"Nome: {this.clientesCadastrados[i].Nome}\n" +
+                        $"Endereço: {this.clientesCadastrados[i].Endereco}\n" +
+                        $"Endereço: {this.clientesCadastrados[i].Cpf}\n" +
+                        "===\n"
+                    );
+                }
+            } else
+            {
+                Console.WriteLine("Necessário login para listar clientes");
             }
+            
         }
 
         public void listarProdutos()
         {
-            Console.WriteLine("-- Produtos cadastrados no sistema --");
-            for (int i = 0; i < this.produtosCadastrados.Count(); i++)
+            if(estaLogado)
             {
-                Console.WriteLine(
-                    "===\n" +
-                    $"Id do produto: {i}\n" +
-                    $"Produto: {this.produtosCadastrados[i].nomeProduto}\n" +
-                    $"Quantidade disponível em estoque: {this.produtosCadastrados[i].QuantidadeEstoque}\n" +
-                    $"Categoria: {this.produtosCadastrados[i].categoria}\n" +
-                    $"Descrição detalhada do produto: {this.produtosCadastrados[i].descricao}\n" +
-                    "===\n"
-                );
+                Console.WriteLine("-- Produtos cadastrados no sistema --");
+                for (int i = 0; i < this.produtosCadastrados.Count(); i++)
+                {
+                    Console.WriteLine(
+                        "===\n" +
+                        $"Id do produto: {i}\n" +
+                        $"Produto: {this.produtosCadastrados[i].nomeProduto}\n" +
+                        $"Quantidade disponível em estoque: {this.produtosCadastrados[i].QuantidadeEstoque}\n" +
+                        $"Categoria: {this.produtosCadastrados[i].categoria}\n" +
+                        $"Descrição detalhada do produto: {this.produtosCadastrados[i].descricao}\n" +
+                        "===\n"
+                    );
+                }
+            } else
+            {
+                Console.WriteLine("Necessário login para listar produtos");
             }
+            
         }
 
         public void deletarProduto()
         {
-            Console.WriteLine("Deseja deletar produto por ID (1) ou por nome (2): ");
-            int opcao = int.Parse(Console.ReadLine());
-
-            switch(opcao)
+            if(estaLogado)
             {
-                case 1:
-                    Console.WriteLine("Informe o ID do produto: ");
-                    int id = int.Parse(Console.ReadLine());
+                Console.WriteLine("Deseja deletar produto por ID (1) ou por nome (2): ");
+                int opcao = int.Parse(Console.ReadLine());
 
-                    funcoesProduto.DeletarProdutoPorID(produtosCadastrados, id);
-                    break;
-                case 2:
-                    Console.WriteLine("Informe o nome do produto: ");
-                    string nome = Console.ReadLine();
+                switch (opcao)
+                {
+                    case 1:
+                        Console.WriteLine("Informe o ID do produto: ");
+                        int id = int.Parse(Console.ReadLine());
 
-                    funcoesProduto.DeletarProdutoPorNome(produtosCadastrados, nome);
-                    break;
+                        funcoesProduto.DeletarProdutoPorID(produtosCadastrados, id);
+                        break;
+                    case 2:
+                        Console.WriteLine("Informe o nome do produto: ");
+                        string nome = Console.ReadLine();
+
+                        funcoesProduto.DeletarProdutoPorNome(produtosCadastrados, nome);
+                        break;
+                }
+            } else
+            {
+                Console.WriteLine("Necessário login para deletar produtos");
             }
+            
         }
     }
 }

@@ -14,6 +14,12 @@ namespace Fase5.Services
 
         public Pedido gerarPedido(Cliente cliente, Produto produto, DateOnly estimativa, string formaPagamento)
         {
+            if(cliente == null || produto == null || estimativa == null || formaPagamento == null)
+            {
+                Console.WriteLine("Por favor, preencha todos os campos para gerar o pedido.");
+                return null;
+            }
+
             Pedido novoPedido = new Pedido(
                 idAtual++,
                 cliente,

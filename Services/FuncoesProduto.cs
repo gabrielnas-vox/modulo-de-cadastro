@@ -14,14 +14,24 @@ namespace Fase5.Services
         [TestMethod]
         public Produto CriarProduto(string nome, int quantidadeEstoque, string categoria, string descricao, double preco)
         {
-            Produto novoProduto = new Produto(
-                idAtual++,
-                nome,
-                quantidadeEstoque,
-                categoria,
-                descricao,
-                preco
-            );
+            if(nome == null || quantidadeEstoque == null || categoria == null || descricao == null || preco == null)
+            {
+                Console.WriteLine("Por favor, preencha todos os campos para cadastrar o produto em sistema");
+                return null;
+            } else if(quantidadeEstoque < 0 || preco < 0)
+            {
+                Console.WriteLine("Você digitou um valor errado para quantidade em estoque ou preço. Por favor, revise os campos.");
+                return null;
+            }
+
+                Produto novoProduto = new Produto(
+                    idAtual++,
+                    nome,
+                    quantidadeEstoque,
+                    categoria,
+                    descricao,
+                    preco
+                );
 
             return novoProduto;
         }

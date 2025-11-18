@@ -13,6 +13,18 @@ namespace Fase5.Services
 
         public Cliente CadastrarCliente(string nome, string endereco, string cpf)
         {
+            if(nome == null || endereco == null || cpf == null)
+            {
+                Console.WriteLine("Por favor, preencha todas as informações de cadastro do cliente.");
+                return null;
+            }
+
+            if(cpf.Count() < 14)
+            {
+                Console.WriteLine("CPF inválido. Por favor, informe o CPF com pontuação.");
+                return null;
+            }
+
             Cliente novoCliente = new Cliente(
                 idAtual++,
                 nome,
