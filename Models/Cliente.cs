@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fase5.Classes
 {
-    internal class Cliente
+    public class Cliente
     {
         private int idCliente;
         private string nome;

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Fase5.Services
 {
-    internal class FuncoesMenu
+    public class FuncoesMenu
     {
         FuncoesCliente funcoesCliente = new FuncoesCliente();
         FuncoesProduto funcoesProduto = new FuncoesProduto();

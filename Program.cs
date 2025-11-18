@@ -6,7 +6,15 @@ using System.Collections.Generic;
 FuncoesMenu menu = new FuncoesMenu();
 
 TestesUsuario testeUsuario = new TestesUsuario();
-testeUsuario.testarCadastro();
+TestesProduto testeProduto = new TestesProduto();
+
+// Teste que realiza com sucesso
+// testeUsuario.testarCadastroSucesso();
+// testeProduto.testarProdutosSucesso();
+testeProduto.testarProdutosFracasso();
+
+// Teste que falha
+// testeUsuario.testarCadastroFalho();
 
 int opcao;
 

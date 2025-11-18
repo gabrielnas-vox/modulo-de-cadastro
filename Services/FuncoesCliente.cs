@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Fase5.Services
 {
-    internal class FuncoesCliente
+    public class FuncoesCliente
     {
         private int idAtual = 0;
 

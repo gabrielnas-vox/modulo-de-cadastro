@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fase5.Classes
 {
-    internal class Pedido
+    public class Pedido
     {
         private int idPedido;
         private DateOnly estimativaEntrega;

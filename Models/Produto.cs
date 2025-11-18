@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fase5.Classes
 {
-    internal class Produto
+    public class Produto
     {
         private int idProduto;
         public string nomeProduto;
@@ -14,6 +14,11 @@ namespace Fase5.Classes
         public string categoria;
         public string descricao;
         public double preco;
+
+        public Produto()
+        {
+
+        }
 
         public Produto(int idProduto, string nomeProduto, int quantidadeEstoque, string categoria, string descricao, double preco)
         {

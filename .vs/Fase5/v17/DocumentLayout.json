@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\fase 5\\testes\\testesusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|solutionrelative:testes\\testesusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\fase 5\\testes\\testesproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|solutionrelative:testes\\testesproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\fase 5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\fase 5\\services\\usuario\\funcoesusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|solutionrelative:services\\usuario\\funcoesusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\fase 5\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\fase 5\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|solutionrelative:models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\fase 5\\testes\\testesusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|solutionrelative:testes\\testesusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -36,7 +40,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-14T18:23:19.552Z",
               "IsPinned": true,
@@ -44,43 +48,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TestesUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Testes\\TestesUsuario.cs",
-              "RelativeDocumentMoniker": "Testes\\TestesUsuario.cs",
-              "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Testes\\TestesUsuario.cs",
-              "RelativeToolTip": "Testes\\TestesUsuario.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwCIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Produto.cs",
+              "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Models\\Produto.cs",
+              "RelativeDocumentMoniker": "Models\\Produto.cs",
+              "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Models\\Produto.cs",
+              "RelativeToolTip": "Models\\Produto.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T16:15:01.181Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-11-18T13:12:11.807Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FuncoesUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Services\\Usuario\\FuncoesUsuario.cs",
-              "RelativeDocumentMoniker": "Services\\Usuario\\FuncoesUsuario.cs",
-              "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Services\\Usuario\\FuncoesUsuario.cs",
-              "RelativeToolTip": "Services\\Usuario\\FuncoesUsuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T16:15:42.953Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Models\\Usuario.cs",
               "RelativeDocumentMoniker": "Models\\Usuario.cs",
               "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Models\\Usuario.cs",
               "RelativeToolTip": "Models\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T17:13:03.808Z",
+              "WhenOpened": "2025-11-18T13:12:00.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TestesProduto.cs",
+              "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Testes\\TestesProduto.cs",
+              "RelativeDocumentMoniker": "Testes\\TestesProduto.cs",
+              "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Testes\\TestesProduto.cs",
+              "RelativeToolTip": "Testes\\TestesProduto.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAswEAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T12:00:35.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TestesUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Testes\\TestesUsuario.cs",
+              "RelativeDocumentMoniker": "Testes\\TestesUsuario.cs",
+              "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Testes\\TestesUsuario.cs",
+              "RelativeToolTip": "Testes\\TestesUsuario.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAowEIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T12:55:12.18Z",
               "EditorCaption": ""
             }
           ]

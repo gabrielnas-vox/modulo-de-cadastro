@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Fase5.Services
 {
-    internal class FuncoesUsuario
+    public class FuncoesUsuario
     {
         private int idAtual = 0;
 
