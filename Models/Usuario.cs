@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fase5.Classes
 {
-    internal class Usuario
+    public class Usuario
     {
         private int idUsuario;
         private string email;
@@ -28,11 +28,11 @@ namespace Fase5.Classes
 
         public override string ToString()
         {
-            return $"Email = {this.email}";
+            return $"Id = {this.Id}, Email = {this.email}, Username = {this.Username}";
         }
-        public int Id { get { return idUsuario; } }
+        public int Id { get; set; }
         public string Email { get; set; }
-        public string Senha { get { return senha; } }
-        public string Username { get { return username; } }
+        public string Senha { get; set; }
+        public string Username { get; set; }
     }
 }
