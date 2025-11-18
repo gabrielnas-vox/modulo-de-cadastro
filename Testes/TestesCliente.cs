@@ -33,11 +33,23 @@ namespace Fase5.Testes
                 .RuleFor(c => c.Endereco, f => f.Person.Address.Street.OrNull(f, .1f))
                 .RuleFor(c => c.Cpf, f => f.Person.Cpf().OrNull(f, .1f));
 
-            var usuarios = usuarioFaker.Generate(10);
+            var clientes = usuarioFaker.Generate(10);
 
-            usuarios.ForEach(c => Console.WriteLine(c.Nome + c.Endereco + c.Cpf));
+            clientes.ForEach(c => Console.WriteLine(c.Nome + c.Endereco + c.Cpf));
 
-            return usuarios;
+            return clientes;
+        }
+
+        public Cliente ClienteCpfInvalido()
+        {
+            var usuarioFaker = new Faker<Cliente>("pt_BR")
+                .RuleFor(c => c.Nome, f => f.Person.FullName)
+                .RuleFor(c => c.Endereco, f => f.Person.Address.Street)
+                .RuleFor(c => c.Cpf, f => f.Person.Cpf(false));
+
+            var cliente = usuarioFaker.Generate(1)[0];
+
+            return cliente;
         }
 
         [Fact(DisplayName = "Testar cadastro sem campos nulos")]
@@ -64,6 +76,15 @@ namespace Fase5.Testes
                 Assert.NotNull(cliente.Endereco);
                 Assert.NotNull(cliente.Cpf);
             }
+        }
+
+        [Fact(DisplayName = "Testar CPF menor que 11 (inválido)")]
+        public void testarCpfInvalido()
+        {
+            Cliente cliente = ClienteCpfInvalido();
+            string cpfInvalido = cliente.Cpf.Remove(2, 4);
+
+            Assert.False(cpfInvalido.Count() < 11);
         }
     }
 }

@@ -17,7 +17,8 @@ TestesCliente testesCliente = new TestesCliente();
 // Teste que falha
 // testeUsuario.testarCadastroFalho();
 // testeProduto.testarQuantidadeNegativaFracasso();
-testesCliente.testarCadastroFracasso();
+// testesCliente.testarCadastroFracasso();
+testesCliente.testarCpfInvalido();
 
 int opcao;
 
