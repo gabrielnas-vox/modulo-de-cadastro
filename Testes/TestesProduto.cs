@@ -60,11 +60,11 @@ namespace Fase5.Testes
 
             foreach(var produto in produtos)
             {
-                Assert.NotNull(produto.nomeProduto);
+                Assert.False(string.IsNullOrWhiteSpace(produto.nomeProduto));
                 Assert.NotNull(produto.QuantidadeEstoque);
-                Assert.NotNull(produto.categoria);
-                Assert.NotNull(produto.descricao);
-                Assert.NotNull(produto.preco);
+                Assert.False(string.IsNullOrWhiteSpace(produto.categoria));
+                Assert.False(string.IsNullOrWhiteSpace(produto.descricao));
+                Assert.NotNull(produto.QuantidadeEstoque);
             }
         }
 
@@ -75,15 +75,15 @@ namespace Fase5.Testes
 
             foreach (var produto in produtos)
             {
-                Assert.NotNull(produto.nomeProduto);
+                Assert.False(string.IsNullOrWhiteSpace(produto.nomeProduto));
                 Assert.NotNull(produto.QuantidadeEstoque);
-                Assert.NotNull(produto.categoria);
-                Assert.NotNull(produto.descricao);
+                Assert.False(string.IsNullOrWhiteSpace(produto.categoria));
+                Assert.False(string.IsNullOrWhiteSpace(produto.descricao));
                 Assert.NotNull(produto.preco);
             }
         }
 
-        [Fact(DisplayName = "Verificar se o preço é maior que zero ou é um valor inválido")]
+        [Fact(DisplayName = "Verificar se o preço é maior que zero ou é um valor inválido / fracasso")]
         public void testarQuantidadeNegativaFracasso()
         {
             Produto produto = produtoQuantidadesErradas();

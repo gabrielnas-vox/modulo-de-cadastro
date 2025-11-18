@@ -59,9 +59,9 @@ namespace Fase5.Testes
 
             foreach (var cliente in lista)
             {
-                Assert.NotNull(cliente.Nome);
-                Assert.NotNull(cliente.Endereco);
-                Assert.NotNull(cliente.Cpf);
+                Assert.False(string.IsNullOrWhiteSpace(cliente.Nome));
+                Assert.False(string.IsNullOrWhiteSpace(cliente.Endereco));
+                Assert.False(string.IsNullOrWhiteSpace(cliente.Cpf));
             }
         }
 
@@ -72,9 +72,9 @@ namespace Fase5.Testes
 
             foreach (var cliente in lista)
             {
-                Assert.NotNull(cliente.Nome);
-                Assert.NotNull(cliente.Endereco);
-                Assert.NotNull(cliente.Cpf);
+                Assert.False(string.IsNullOrWhiteSpace(cliente.Nome));
+                Assert.False(string.IsNullOrWhiteSpace(cliente.Endereco));
+                Assert.False(string.IsNullOrWhiteSpace(cliente.Cpf));
             }
         }
 

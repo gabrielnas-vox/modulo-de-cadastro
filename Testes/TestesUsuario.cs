@@ -15,7 +15,7 @@ namespace Fase5.Testes
             var usuarioFaker = new Faker<Usuario>("pt_BR")
                 .RuleFor(c => c.Email, f => f.Internet.Email(f.Person.FirstName))
                 .RuleFor(c => c.Senha, f => f.Random.Number(100000000, 2000000000).ToString())
-                .RuleFor(c => c.Username, f => f.Person.FirstName);
+                .RuleFor(c => c.username, f => f.Person.FirstName);
 
             var usuarios = usuarioFaker.Generate(10);
 
@@ -29,7 +29,7 @@ namespace Fase5.Testes
             var usuarioFaker = new Faker<Usuario>("pt_BR")
                 .RuleFor(c => c.Email, f => f.Internet.Email(f.Person.FirstName).OrNull(f, .1f))
                 .RuleFor(c => c.Senha, f => f.Random.Number(1000000, 20000000).ToString().OrNull(f, .1f))
-                .RuleFor(c => c.Username, f => f.Person.FirstName.OrNull(f, .1f));
+                .RuleFor(c => c.username, f => f.Person.FirstName.OrNull(f, .1f));
 
             var usuarios = usuarioFaker.Generate(10);
 
@@ -45,12 +45,12 @@ namespace Fase5.Testes
 
             foreach (var usuario in lista)
             {
-                Assert.NotNull(usuario.Email);
+                Assert.False(string.IsNullOrWhiteSpace(usuario.Email));
 
-                Assert.NotNull(usuario.Senha);
+                Assert.False(string.IsNullOrWhiteSpace(usuario.Senha));
                 Assert.False(usuario.Senha.Count() < 8, $"A senha precisa ser maior que 8 caracteres");
 
-                Assert.NotNull(usuario.Username);
+                Assert.False(string.IsNullOrWhiteSpace(usuario.username));
             }
         }
 
@@ -61,14 +61,12 @@ namespace Fase5.Testes
 
             foreach (var usuario in lista)
             {
-                Assert.NotNull(usuario.Email);
+                Assert.False(string.IsNullOrWhiteSpace(usuario.Email));
 
-                Assert.NotNull(usuario.Senha);
+                Assert.False(string.IsNullOrWhiteSpace(usuario.Senha));
                 Assert.False(usuario.Senha.Count() < 8, $"A senha precisa ser maior que 8 caracteres");
 
-                Assert.NotNull(usuario.Username);
-
-                Console.WriteLine($"Senha: {usuario.Senha}");
+                Assert.False(string.IsNullOrWhiteSpace(usuario.username));
             }
         }
     }
