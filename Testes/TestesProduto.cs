@@ -17,11 +17,9 @@ namespace Fase5.Testes
                 .RuleFor(c => c.QuantidadeEstoque, f => f.Random.Number(1, 500))
                 .RuleFor(c => c.categoria, f => f.Random.Word())
                 .RuleFor(c => c.descricao, f => f.Random.Words(6))
-                .RuleFor(c => c.preco, f => f.Random.Double(1.0, 1500.0));
+                .RuleFor(c => c.preco, f => double.Parse(f.Commerce.Price()));
 
             var produtos = produtoFaker.Generate(10);
-
-            produtos.ForEach(p => Console.WriteLine(p.nomeProduto + p.QuantidadeEstoque + p.categoria + p.descricao + p.preco));
 
             return produtos;
         }
@@ -90,6 +88,23 @@ namespace Fase5.Testes
 
             Assert.False(produto.QuantidadeEstoque > 0);
             Assert.False(produto.preco > 0);
+        }
+
+        [Fact(DisplayName = "Verificar se desconto está sendo aplicado corretamente / Sucesso")]
+        public void TesteCalculoDesconto()
+        {
+            Random random = new Random();
+
+            List<Produto> produtos = ListaProdutosFakesCertos();
+            List<int> descontos = new List<int> { 10, 19, 32, 5, 8, 2, 50, 35, 21, 15};
+            
+            foreach(Produto produto in produtos)
+            {
+                for(int i = 0; i < descontos.Count(); i++)
+                {
+                    Assert.Equal(funcoes.AplicarDesconto(produto, descontos[i]).preco, produto.preco - (descontos[i] / 100 * produto.preco));
+                }
+            }
         }
     }
 }

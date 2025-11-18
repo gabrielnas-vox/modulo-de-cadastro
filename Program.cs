@@ -13,12 +13,13 @@ TestesCliente testesCliente = new TestesCliente();
 // testeUsuario.testarCadastroSucesso();
 // testeProduto.testarProdutosSucesso();
 // testesCliente.testarCadastroSucesso();
+testeProduto.TesteCalculoDesconto();
 
 // Teste que falha
 // testeUsuario.testarCadastroFalho();
 // testeProduto.testarQuantidadeNegativaFracasso();
 // testesCliente.testarCadastroFracasso();
-testesCliente.testarCpfInvalido();
+// testesCliente.testarCpfInvalido();
 
 int opcao;
 
@@ -73,6 +74,5 @@ while(true)
         case 9:
             menu.deletarProduto();
             break;
-
     }
 }
