@@ -10,81 +10,61 @@ namespace Fase5.Testes
 {
     public class TestesCliente
     {
-        FuncoesCliente funcoes = new FuncoesCliente();
+        FuncoesCliente funcoes;
+        Faker faker;
 
-        public List<Cliente> ListaClientesFakesCertos()
+        List<string> nomes;
+        List<string> enderecos;
+        List<string> cpfs;
+
+        public TestesCliente()
         {
-            var usuarioFaker = new Faker<Cliente>("pt_BR")
-                .RuleFor(c => c.Nome, f => f.Person.FullName)
-                .RuleFor(c => c.Endereco, f => f.Person.Address.Street)
-                .RuleFor(c => c.Cpf, f => f.Person.Cpf());
+            funcoes = new FuncoesCliente();
+            faker = new Faker();
 
-            var usuarios = usuarioFaker.Generate(10);
-
-            usuarios.ForEach(c => Console.WriteLine(c.Nome + c.Endereco + c.Cpf));
-
-            return usuarios;
-        }
-
-        public List<Cliente> ListaClientesFakesErrados()
-        {
-            var usuarioFaker = new Faker<Cliente>("pt_BR")
-                .RuleFor(c => c.Nome, f => f.Person.FullName.OrNull(f, .1f))
-                .RuleFor(c => c.Endereco, f => f.Person.Address.Street.OrNull(f, .1f))
-                .RuleFor(c => c.Cpf, f => f.Person.Cpf().OrNull(f, .1f));
-
-            var clientes = usuarioFaker.Generate(10);
-
-            clientes.ForEach(c => Console.WriteLine(c.Nome + c.Endereco + c.Cpf));
-
-            return clientes;
-        }
-
-        public Cliente ClienteCpfInvalido()
-        {
-            var usuarioFaker = new Faker<Cliente>("pt_BR")
-                .RuleFor(c => c.Nome, f => f.Person.FullName)
-                .RuleFor(c => c.Endereco, f => f.Person.Address.Street)
-                .RuleFor(c => c.Cpf, f => f.Person.Cpf(false));
-
-            var cliente = usuarioFaker.Generate(1)[0];
-
-            return cliente;
+            nomes = Enumerable.Range(0, 10)
+                .Select(i => faker.Name.FullName())
+                .ToList();
+            enderecos = Enumerable.Range(0, 10)
+                .Select(i => faker.Person.Address.Street)
+                .ToList();
+            cpfs = Enumerable.Range(0, 10)
+                .Select(i => faker.Person.Cpf())
+                .ToList();
         }
 
         [Fact(DisplayName = "Testar cadastro sem campos nulos")]
         public void testarCadastroSucesso()
         {
-            List<Cliente> lista = ListaClientesFakesCertos();
-
-            foreach (var cliente in lista)
+            for(int i = 0; i < 10; i++)
             {
-                Assert.False(string.IsNullOrWhiteSpace(cliente.Nome));
-                Assert.False(string.IsNullOrWhiteSpace(cliente.Endereco));
-                Assert.False(string.IsNullOrWhiteSpace(cliente.Cpf));
+                Cliente clienteTeste = funcoes.CadastrarCliente(this.nomes[i], enderecos[i], cpfs[i]);
+                Assert.NotNull(clienteTeste);
             }
+
+            Console.WriteLine("Teste passou com sucesso!");
         }
 
         [Fact(DisplayName = "Testar cadastro com campo(s) nulo(s)")]
         public void testarCadastroFracasso()
         {
-            List<Cliente> lista = ListaClientesFakesErrados();
+            string nome = faker.Person.FullName.OrNull(faker, 0.5f);
+            string endereco = faker.Person.Address.Street.OrNull(faker, 0.5f);
+            string cpf = faker.Person.Cpf().OrNull(faker, 1f);
 
-            foreach (var cliente in lista)
-            {
-                Assert.False(string.IsNullOrWhiteSpace(cliente.Nome));
-                Assert.False(string.IsNullOrWhiteSpace(cliente.Endereco));
-                Assert.False(string.IsNullOrWhiteSpace(cliente.Cpf));
-            }
+            Cliente clienteTeste = funcoes.CadastrarCliente(nome, endereco, cpf);
+
+            Assert.NotNull(clienteTeste);
         }
 
-        [Fact(DisplayName = "Testar CPF menor que 11 (inválido)")]
+        [Fact(DisplayName = "Testar CPF menor que 14 caracteres")]
         public void testarCpfInvalido()
         {
-            Cliente cliente = ClienteCpfInvalido();
-            string cpfInvalido = cliente.Cpf.Remove(2, 4);
+            string cpf = faker.Person.Cpf().Remove(2, 4);
 
-            Assert.False(cpfInvalido.Count() < 11);
+            Cliente clienteTeste = funcoes.CadastrarCliente(this.nomes[0], this.enderecos[0], cpf);
+
+            Assert.NotNull(clienteTeste);
         }
     }
 }
