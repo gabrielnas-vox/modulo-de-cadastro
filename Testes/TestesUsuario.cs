@@ -1,6 +1,8 @@
-﻿using Fase5.Classes;
+﻿using Bogus;
+using Bogus.DataSets;
+using Bogus.Extensions.Brazil;
+using Fase5.Classes;
 using Fase5.Services;
-using Bogus;
 using Xunit;
 using Assert = Xunit.Assert;
 
@@ -9,65 +11,66 @@ namespace Fase5.Testes
     public class TestesUsuario
     {
         FuncoesUsuario funcoes = new FuncoesUsuario();
+        Faker faker;
 
-        public List<Usuario> ListaUsuariosFakesCertos()
+        List<string> email;
+        List<string> senha;
+        List<string> username;
+
+        public TestesUsuario()
         {
-            var usuarioFaker = new Faker<Usuario>("pt_BR")
-                .RuleFor(c => c.Email, f => f.Internet.Email(f.Person.FirstName))
-                .RuleFor(c => c.Senha, f => f.Random.Number(100000000, 2000000000).ToString())
-                .RuleFor(c => c.username, f => f.Person.FirstName);
+            funcoes = new FuncoesUsuario();
+            faker = new Faker();
 
-            var usuarios = usuarioFaker.Generate(10);
-
-            usuarios.ForEach(u => Console.WriteLine(u.Email));
-
-            return usuarios;
+            email = Enumerable.Range(0, 10)
+                .Select(i => faker.Person.Email)
+                .ToList();
+            senha = Enumerable.Range(0, 10)
+                .Select(i => faker.Internet.Password())
+                .ToList();
+            username = Enumerable.Range(0, 10)
+                .Select(i => faker.Person.UserName)
+                .ToList();
         }
 
-        public List<Usuario> ListaUsuariosFakesErrados()
-        {
-            var usuarioFaker = new Faker<Usuario>("pt_BR")
-                .RuleFor(c => c.Email, f => f.Internet.Email(f.Person.FirstName).OrNull(f, .1f))
-                .RuleFor(c => c.Senha, f => f.Random.Number(1000000, 20000000).ToString().OrNull(f, .1f))
-                .RuleFor(c => c.username, f => f.Person.FirstName.OrNull(f, .1f));
-
-            var usuarios = usuarioFaker.Generate(10);
-
-            usuarios.ForEach(u => Console.WriteLine(u.Email));
-
-            return usuarios;
-        }
-
-        [Fact]
+        [Fact(DisplayName = "Testar cadastros sem campos nulos")]
         public void testarCadastroSucesso()
         {
-            List<Usuario> lista = ListaUsuariosFakesCertos();
-
-            foreach (var usuario in lista)
+            for (int i = 0; i < 10; i++)
             {
-                Assert.False(string.IsNullOrWhiteSpace(usuario.Email));
-
-                Assert.False(string.IsNullOrWhiteSpace(usuario.Senha));
-                Assert.False(usuario.Senha.Count() < 8, $"A senha precisa ser maior que 8 caracteres");
-
-                Assert.False(string.IsNullOrWhiteSpace(usuario.username));
+                Usuario usuarioTeste = funcoes.cadastro(this.email[i], senha[i], username[i]);
+                Assert.NotNull(usuarioTeste);
             }
+
+            Console.WriteLine("Teste passou com sucesso!");
         }
 
-        [Fact]
+        [Fact(DisplayName = "Testar cadastro com campo(s) nulo(s)")]
         public void testarCadastroFalho()
         {
-            List<Usuario> lista = ListaUsuariosFakesErrados();
+            string email = faker.Person.Email.OrNull(faker, 0.5f);
+            string senha = faker.Internet.Password().OrNull(faker, 0.5f);
+            string username = faker.Person.UserName.OrNull(faker, 0.5f);
 
-            foreach (var usuario in lista)
+            if(email != null && senha != null && username != null)
             {
-                Assert.False(string.IsNullOrWhiteSpace(usuario.Email));
-
-                Assert.False(string.IsNullOrWhiteSpace(usuario.Senha));
-                Assert.False(usuario.Senha.Count() < 8, $"A senha precisa ser maior que 8 caracteres");
-
-                Assert.False(string.IsNullOrWhiteSpace(usuario.username));
+                username = null;
             }
+
+            Usuario usuarioTeste = funcoes.cadastro(email, senha, username);
+
+            Assert.NotNull(usuarioTeste);
+        }
+
+        [Fact(DisplayName = "Testar senha menor que 8 caracteres")]
+        public void testarSenhaMenorQue8Chars()
+        {
+            int tamanho = faker.Random.Number(1, 7);
+            string senha = faker.Internet.Password(tamanho);
+
+            Usuario usuarioTeste = funcoes.cadastro(this.email[0], senha, this.username[0]);
+
+            Assert.NotNull(usuarioTeste);
         }
     }
 }
