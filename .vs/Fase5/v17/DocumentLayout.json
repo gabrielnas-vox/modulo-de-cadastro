@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\fase 5\\testes\\testesproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|solutionrelative:testes\\testesproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\fase 5\\services\\funcoesmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|solutionrelative:services\\funcoesmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\fase 5\\services\\funcoespedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|solutionrelative:services\\funcoespedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\fase 5\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|solutionrelative:models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\fase 5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\fase 5\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\fase 5\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|solutionrelative:models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\fase 5\\testes\\testesusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|solutionrelative:testes\\testesusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,13 +30,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAA8AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-14T18:23:19.552Z",
               "IsPinned": true,
@@ -48,54 +44,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Produto.cs",
-              "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Models\\Produto.cs",
-              "RelativeDocumentMoniker": "Models\\Produto.cs",
-              "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Models\\Produto.cs",
-              "RelativeToolTip": "Models\\Produto.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "FuncoesPedido.cs",
+              "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Services\\FuncoesPedido.cs",
+              "RelativeDocumentMoniker": "Services\\FuncoesPedido.cs",
+              "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Services\\FuncoesPedido.cs",
+              "RelativeToolTip": "Services\\FuncoesPedido.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T13:12:11.807Z",
+              "WhenOpened": "2025-11-19T18:27:22.192Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Models\\Usuario.cs",
-              "RelativeToolTip": "Models\\Usuario.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwCQAAAAFAAAAAAAAAA==",
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "Models\\Cliente.cs",
+              "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Models\\Cliente.cs",
+              "RelativeToolTip": "Models\\Cliente.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAA7wDkAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T13:12:00.417Z",
+              "WhenOpened": "2025-11-19T17:51:32.914Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TestesProduto.cs",
-              "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Testes\\TestesProduto.cs",
-              "RelativeDocumentMoniker": "Testes\\TestesProduto.cs",
-              "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Testes\\TestesProduto.cs",
-              "RelativeToolTip": "Testes\\TestesProduto.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAswEAAAAAQAAAAAAAAAA==",
+              "Title": "FuncoesMenu.cs",
+              "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Services\\FuncoesMenu.cs",
+              "RelativeDocumentMoniker": "Services\\FuncoesMenu.cs",
+              "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Services\\FuncoesMenu.cs",
+              "RelativeToolTip": "Services\\FuncoesMenu.cs",
+              "ViewState": "AgIAAOIAAAAAAAAAAAAIwPUAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T12:00:35.653Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TestesUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Testes\\TestesUsuario.cs",
-              "RelativeDocumentMoniker": "Testes\\TestesUsuario.cs",
-              "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Testes\\TestesUsuario.cs",
-              "RelativeToolTip": "Testes\\TestesUsuario.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAowEIAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T12:55:12.18Z",
+              "WhenOpened": "2025-11-19T17:48:35.288Z",
               "EditorCaption": ""
             }
           ]

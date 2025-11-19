@@ -11,7 +11,7 @@ namespace Fase5.Classes
         private int idUsuario;
         private string email;
         private string senha;
-        private string username;
+        public string username;
 
         public Usuario()
         {
@@ -28,11 +28,17 @@ namespace Fase5.Classes
 
         public override string ToString()
         {
-            return $"Id = {this.Id}, Email = {this.email}, Username = {this.Username}";
+            return $"Id = {this.Id}, Email = {this.email}, Username = {this.username}";
         }
         public int Id { get; set; }
-        public string Email { get; set; }
-        public string Senha { get; set; }
-        public string Username { get; set; }
+        public string Email { 
+            get { return this.email; }
+            set { email = value; }
+        }
+        public string Senha
+        {
+            get { return this.senha; }
+            set { senha = value; }
+        }
     }
 }

@@ -83,7 +83,7 @@ namespace Fase5.Services
 
             double valorComDesconto = produto.preco * (desconto / 100);
 
-            Console.WriteLine($"O produto {produto.nomeProduto} recebeu um desconto de {desconto}%, passando de {produto.preco} para {valorComDesconto}");
+            Console.WriteLine($"O produto {produto.nomeProduto} recebeu um desconto de {desconto}%, passando de R${Math.Round(produto.preco)} para R${Math.Round(produto.preco - valorComDesconto)}");
 
             produto.preco = produto.preco - valorComDesconto;
             return produto;
