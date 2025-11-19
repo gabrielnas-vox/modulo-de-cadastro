@@ -118,11 +118,17 @@ namespace Fase5.Services
                 Console.WriteLine("Qual é o CPF do cliente: ");
                 this.cpf = Console.ReadLine();
 
-                clientesCadastrados.Add(
+                if(!string.IsNullOrWhiteSpace(nome) && !string.IsNullOrWhiteSpace(endereco) && !string.IsNullOrWhiteSpace(cpf)) 
+                {
+                    clientesCadastrados.Add(
                     funcoesCliente.CadastrarCliente(this.nome, this.endereco, this.cpf)
-                );
+                    );
+                } else
+                {
+                    Console.WriteLine("Necessário que todos os campos sejam preenchidos. Por favor, tente novamente.");
+                }
 
-                Console.WriteLine("Cliente novo cadastrado!");
+                    Console.WriteLine("Cliente novo cadastrado!");
             } else
             {
                 Console.WriteLine("Você precisa estar logado para cadastrar um cliente.");
