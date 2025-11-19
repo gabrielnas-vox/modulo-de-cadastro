@@ -13,7 +13,7 @@ TestesCliente testesCliente = new TestesCliente();
 // testeUsuario.testarCadastroSucesso();
 // testeProduto.testarProdutosSucesso();
 // testesCliente.testarCadastroSucesso();
-testeProduto.TesteCalculoDesconto();
+// testeProduto.TesteCalculoDesconto();
 
 // Teste que falha
 // testeUsuario.testarCadastroFalho();

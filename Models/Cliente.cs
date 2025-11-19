@@ -25,8 +25,20 @@ namespace Fase5.Classes
             this.cpf = cpf;
         }
 
-        public string Nome { get; set; }
-        public string Endereco { get; set; }
-        public string Cpf { get; set; }
+        public string Nome 
+        { 
+            get { return this.nome;  }
+            set { this.nome = value;  }
+        }
+        public string Endereco
+        {
+            get { return this.endereco; }
+            set { this.endereco = value; }
+        }
+        public string Cpf 
+        {
+            get { return this.cpf; }
+            set { this.cpf = value; }
+        }
     }
 }

@@ -195,18 +195,25 @@ namespace Fase5.Services
         {
             if(estaLogado)
             {
-                Console.WriteLine("-- Lista de clientes cadastrados e seus pedidos --");
-                for (int i = 0; i < this.clientesCadastrados.Count(); i++)
+                if(this.clientesCadastrados.Count() > 0)
                 {
-                    Console.WriteLine(
-                        "===\n" +
-                        $"Id do cliente: {i}\n" +
-                        $"Nome: {this.clientesCadastrados[i].Nome}\n" +
-                        $"Endereço: {this.clientesCadastrados[i].Endereco}\n" +
-                        $"Endereço: {this.clientesCadastrados[i].Cpf}\n" +
-                        "===\n"
-                    );
+                    Console.WriteLine("-- Lista de clientes cadastrados e seus pedidos --");
+                    for (int i = 0; i < this.clientesCadastrados.Count(); i++)
+                    {
+                        Console.WriteLine(
+                            "===\n" +
+                            $"Id do cliente: {i}\n" +
+                            $"Nome: {this.clientesCadastrados[i].Nome}\n" +
+                            $"Endereço: {this.clientesCadastrados[i].Endereco}\n" +
+                            $"Cpf: {this.clientesCadastrados[i].Cpf}\n" +
+                            "===\n"
+                        );
+                    }
+                } else
+                {
+                    Console.WriteLine("Não há clientes cadastrados no sistema.");
                 }
+                
             } else
             {
                 Console.WriteLine("Necessário login para listar clientes");
