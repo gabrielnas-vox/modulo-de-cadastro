@@ -148,7 +148,7 @@ namespace Fase5.Services
                 Console.WriteLine("Informe o preço do produto: ");
                 preco = double.Parse(Console.ReadLine());
 
-                if(!string.IsNullOrWhiteSpace(nome) || quantidadeEstoque > 0 || !string.IsNullOrWhiteSpace(categoria) || preco > 0)
+                if(!string.IsNullOrWhiteSpace(nome) && quantidadeEstoque > 0 && !string.IsNullOrWhiteSpace(categoria) && preco > 0)
                 {
                     produtosCadastrados.Add(
                     funcoesProduto.CriarProduto(nome, quantidadeEstoque, categoria, descricao, preco)
