@@ -60,9 +60,16 @@ namespace Fase5.Services
                 Console.WriteLine("Informe sua senha: ");
                 this.senha = Console.ReadLine();
 
-                dadosCadastro = funcoesUsuario.cadastro(email, senha, nome);
+                if(!string.IsNullOrWhiteSpace(nome) && !string.IsNullOrWhiteSpace(email) && !string.IsNullOrWhiteSpace(senha))
+                {
+                    dadosCadastro = funcoesUsuario.cadastro(email, senha, nome);
+                } else
+                {
+                    Console.WriteLine("Informações inválidas. Por favor, tente novamente.");
+                }
 
-                if(dadosCadastro.Email != null)
+
+                if (dadosCadastro.Email != null)
                 {
                     cadastrado = true;
                 }
@@ -123,12 +130,11 @@ namespace Fase5.Services
                     clientesCadastrados.Add(
                     funcoesCliente.CadastrarCliente(this.nome, this.endereco, this.cpf)
                     );
+                    Console.WriteLine("Cliente novo cadastrado!");
                 } else
                 {
                     Console.WriteLine("Necessário que todos os campos sejam preenchidos. Por favor, tente novamente.");
                 }
-
-                    Console.WriteLine("Cliente novo cadastrado!");
             } else
             {
                 Console.WriteLine("Você precisa estar logado para cadastrar um cliente.");
@@ -193,12 +199,23 @@ namespace Fase5.Services
                 Console.Write("Qual será a forma de pagamento: ");
                 this.formaPagamento = Console.ReadLine();
 
-                pedidosCadastrados.Add(funcoesPedido.gerarPedido(
+                Pedido pedidoNovo = funcoesPedido.gerarPedido(
                     this.clientesCadastrados[clienteQueComprou],
                     this.produtosCadastrados[produtoComprado],
                     this.estimativaEntrega,
                     this.formaPagamento
-                ));
+                );
+
+                pedidosCadastrados.Add(pedidoNovo);
+
+                foreach (Cliente cliente in this.clientesCadastrados)
+                {
+                    if(clienteQueComprou == cliente.Id)
+                    {
+                        cliente.setarPedido(pedidoNovo);
+                    }
+                }
+
             } else
             {
                 Console.WriteLine("Necessário login para cadastrar pedido");
