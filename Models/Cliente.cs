@@ -51,6 +51,18 @@ namespace Fase5.Classes
             get { return this.pedidosFeitos; }
         }
 
+        public void mostrarPedidos()
+        {
+            for(int i = 0; i < this.pedidosFeitos.Count(); i++)
+            {
+                Console.WriteLine("Nº pedido: " + this.pedidosFeitos[i].Id);
+                Console.WriteLine("Nº pedido: " + this.pedidosFeitos[i].Produto);
+                Console.WriteLine("Data estimada de entrega: " + this.pedidosFeitos[i].EstimativaEntrega);
+                Console.WriteLine("Forma de pagamento: " + this.pedidosFeitos[i].FormaPagamento);
+
+            }
+        }
+
         public void setarPedido(Pedido pedido)
         {
             this.pedidosFeitos.Add(pedido);

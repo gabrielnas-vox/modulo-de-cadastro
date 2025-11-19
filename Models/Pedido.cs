@@ -23,6 +23,8 @@ namespace Fase5.Classes
             this.formaPagamento = formaPagamento;
         }
 
+        public int Id { get { return this.idPedido; } }
+        public Produto Produto { get { return this.produto; } }
         public DateOnly EstimativaEntrega { get; set; }
         public string FormaPagamento { get; set; }
         public string Cliente { get { return cliente.Nome; } }

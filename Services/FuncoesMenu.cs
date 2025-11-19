@@ -238,8 +238,10 @@ namespace Fase5.Services
                             $"Nome: {this.clientesCadastrados[i].Nome}\n" +
                             $"Endereço: {this.clientesCadastrados[i].Endereco}\n" +
                             $"Cpf: {this.clientesCadastrados[i].Cpf}\n" +
-                            "===\n"
+                            "\n"
                         );
+
+                        this.clientesCadastrados[i].mostrarPedidos();
                     }
                 } else
                 {
