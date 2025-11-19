@@ -148,9 +148,16 @@ namespace Fase5.Services
                 Console.WriteLine("Informe o preço do produto: ");
                 preco = double.Parse(Console.ReadLine());
 
-                produtosCadastrados.Add(
+                if(!string.IsNullOrWhiteSpace(nome) || quantidadeEstoque > 0 || !string.IsNullOrWhiteSpace(categoria) || preco > 0)
+                {
+                    produtosCadastrados.Add(
                     funcoesProduto.CriarProduto(nome, quantidadeEstoque, categoria, descricao, preco)
                 );
+                } else
+                {
+                    Console.WriteLine("Informações inválidas. Por favor, tente novamente.");
+                }
+                
             } else
             {
                 Console.WriteLine("Você precisa estar logado para cadastrar um produto.");
@@ -169,10 +176,12 @@ namespace Fase5.Services
                 Console.Write("Selecione o ID do cliente: ");
                 this.clienteQueComprou = int.Parse(Console.ReadLine());
 
+                this.listarProdutos();
+
                 Console.Write("Selecione o ID do produto: ");
                 this.produtoComprado = int.Parse(Console.ReadLine());
 
-                Console.Write("Qual será a estimativa de entrega (Ano/Mês/dias): ");
+                Console.Write("Qual será a estimativa de entrega (Ano/Mês/Dia): ");
                 this.estimativaEntrega = DateOnly.Parse(Console.ReadLine());
 
                 Console.Write("Qual será a forma de pagamento: ");
