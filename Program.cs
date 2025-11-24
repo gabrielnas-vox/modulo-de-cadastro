@@ -24,7 +24,8 @@ TestesPedido testesPedido = new TestesPedido();
 // testeProduto.testarQuantidadeNegativaFracasso();
 // testesCliente.testarCadastroFracasso();
 // testesCliente.testarCpfInvalido();
-testesPedido.testarCadastroFracasso();
+// testesPedido.testarCadastroFracasso();
+testesPedido.testarDataPassada();
 
 int opcao;
 

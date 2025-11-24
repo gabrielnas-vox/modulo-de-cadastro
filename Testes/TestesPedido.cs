@@ -79,14 +79,14 @@ namespace Fase5.Testes
             Assert.NotNull(pedidoErrado);
         }
 
-        //[Fact(DisplayName = "Testar CPF menor que 14 caracteres")]
-        //public void testarCpfInvalido()
-        //{
-        //    string cpf = faker.Person.Cpf().Remove(2, 4);
+        [Fact(DisplayName = "Testar data passada (Ex: 12/07/2023)")]
+        public void testarDataPassada()
+        {
+            DateOnly estimativa = faker.Date.PastDateOnly();
 
-        //    Cliente clienteTeste = funcoes.CadastrarCliente(this.nomes[0], this.enderecos[0], cpf);
+            Pedido pedidoErrado = funcoes.gerarPedido(clientes[0], produtos[0], estimativa, formaPagamento[0]);
 
-        //    Assert.NotNull(clienteTeste);
-        //}
+            Assert.NotNull(pedidoErrado);
+        }
     }
 }
