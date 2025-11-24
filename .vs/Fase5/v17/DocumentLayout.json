@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B36B2B83-9020-407D-93B0-6655EDA93F63}|..\\TestesUnitarios\\TestesUnitarios.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\testesunitarios\\testescliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B36B2B83-9020-407D-93B0-6655EDA93F63}|..\\TestesUnitarios\\TestesUnitarios.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\testesunitarios\\testesproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B36B2B83-9020-407D-93B0-6655EDA93F63}|..\\TestesUnitarios\\TestesUnitarios.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\testesunitarios\\testespedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\fase 5\\testes\\testescliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|solutionrelative:testes\\testescliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B36B2B83-9020-407D-93B0-6655EDA93F63}|..\\TestesUnitarios\\TestesUnitarios.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\testesunitarios\\testesusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\fase 5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\fase 5\\testes\\testespedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|solutionrelative:testes\\testespedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|c:\\users\\gabrielalexandrenasc\\source\\repos\\fase 5\\services\\funcoespedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD335F77-DAC2-4718-BF3D-9BB6100A35D4}|Fase5.csproj|solutionrelative:services\\funcoespedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,17 +30,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAABsAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAwwDwAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-14T18:23:19.552Z",
               "IsPinned": true,
@@ -40,28 +48,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FuncoesPedido.cs",
-              "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Services\\FuncoesPedido.cs",
-              "RelativeDocumentMoniker": "Services\\FuncoesPedido.cs",
-              "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Services\\FuncoesPedido.cs",
-              "RelativeToolTip": "Services\\FuncoesPedido.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAABkAAAAcAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "TestesProduto.cs",
+              "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\TestesUnitarios\\TestesProduto.cs",
+              "RelativeDocumentMoniker": "..\\TestesUnitarios\\TestesProduto.cs",
+              "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\TestesUnitarios\\TestesProduto.cs",
+              "RelativeToolTip": "..\\TestesUnitarios\\TestesProduto.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAAAFUAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T13:20:16.88Z",
+              "WhenOpened": "2025-11-24T18:46:41.075Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TestesPedido.cs",
-              "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Testes\\TestesPedido.cs",
-              "RelativeDocumentMoniker": "Testes\\TestesPedido.cs",
-              "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Testes\\TestesPedido.cs",
-              "RelativeToolTip": "Testes\\TestesPedido.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFgAAAApAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\TestesUnitarios\\TestesPedido.cs",
+              "RelativeDocumentMoniker": "..\\TestesUnitarios\\TestesPedido.cs",
+              "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\TestesUnitarios\\TestesPedido.cs",
+              "RelativeToolTip": "..\\TestesUnitarios\\TestesPedido.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAAFgAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T12:10:38.34Z",
+              "WhenOpened": "2025-11-24T18:46:09.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TestesUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\TestesUnitarios\\TestesUsuario.cs",
+              "RelativeDocumentMoniker": "..\\TestesUnitarios\\TestesUsuario.cs",
+              "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\TestesUnitarios\\TestesUsuario.cs",
+              "RelativeToolTip": "..\\TestesUnitarios\\TestesUsuario.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAEgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T18:45:03.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TestesCliente.cs",
+              "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Testes\\TestesCliente.cs",
+              "RelativeDocumentMoniker": "Testes\\TestesCliente.cs",
+              "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\Fase 5\\Testes\\TestesCliente.cs",
+              "RelativeToolTip": "Testes\\TestesCliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T18:40:12.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TestesCliente.cs",
+              "DocumentMoniker": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\TestesUnitarios\\TestesCliente.cs",
+              "RelativeDocumentMoniker": "..\\TestesUnitarios\\TestesCliente.cs",
+              "ToolTip": "C:\\Users\\GabrielAlexandreNasc\\source\\repos\\TestesUnitarios\\TestesCliente.cs",
+              "RelativeToolTip": "..\\TestesUnitarios\\TestesCliente.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAEEAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T18:34:03.089Z",
               "EditorCaption": ""
             }
           ]
