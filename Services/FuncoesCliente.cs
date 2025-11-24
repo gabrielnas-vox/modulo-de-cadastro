@@ -19,18 +19,18 @@ namespace Fase5.Services
                 return null;
             }
 
-            if(cpf.Count() < 14)
+            if(cpf.Count() != 14)
             {
                 Console.WriteLine("CPF inválido. Por favor, informe o CPF com pontuação.");
                 return null;
             }
 
-            Cliente novoCliente = new Cliente(
-                idAtual++,
-                nome,
-                endereco,
-                cpf
-            );
+                Cliente novoCliente = new Cliente(
+                    idAtual++,
+                    nome,
+                    endereco,
+                    cpf
+                );
 
             return novoCliente;
         }

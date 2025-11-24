@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Fase5")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc8466a2f90950e801dc6d97c967f98a5c0e8971")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9be44521f0634aff9aca7355ed1972fef0bae24")]
 [assembly: System.Reflection.AssemblyProductAttribute("Fase5")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Fase5")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

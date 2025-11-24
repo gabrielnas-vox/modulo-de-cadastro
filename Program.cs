@@ -8,18 +8,23 @@ FuncoesMenu menu = new FuncoesMenu();
 TestesUsuario testeUsuario = new TestesUsuario();
 TestesProduto testeProduto = new TestesProduto();
 TestesCliente testesCliente = new TestesCliente();
+TestesPedido testesPedido = new TestesPedido();
 
 // Teste que realiza com sucesso
 // testeUsuario.testarCadastroSucesso();
 // testeProduto.testarProdutosSucesso();
 // testesCliente.testarCadastroSucesso();
 // testeProduto.TesteCalculoDesconto();
+// testesPedido.testarCadastroSucesso();
 
 // Teste que falha
 // testeUsuario.testarCadastroFalho();
+// testeUsuario.testarSenhaMenorQue8Chars();
+// testeProduto.cadastrarProdutoFracasso();
 // testeProduto.testarQuantidadeNegativaFracasso();
 // testesCliente.testarCadastroFracasso();
 // testesCliente.testarCpfInvalido();
+testesPedido.testarCadastroFracasso();
 
 int opcao;
 

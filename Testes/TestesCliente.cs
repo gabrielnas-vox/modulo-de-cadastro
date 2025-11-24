@@ -13,9 +13,9 @@ namespace Fase5.Testes
         FuncoesCliente funcoes;
         Faker faker;
 
-        List<string> nomes;
-        List<string> enderecos;
-        List<string> cpfs;
+        public List<string> nomes;
+        public List<string> enderecos;
+        public List<string> cpfs;
 
         public TestesCliente()
         {

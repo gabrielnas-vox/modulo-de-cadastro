@@ -12,11 +12,11 @@ namespace Fase5.Testes
         FuncoesProduto funcoes = new FuncoesProduto();
         Faker faker;
 
-        List<string> nome;
-        List<int> quantidade;
-        List<string> categoria;
-        List<string> descricao;
-        List<double> preco;
+        public List<string> nome;
+        public List<int> quantidade;
+        public List<string> categoria;
+        public List<string> descricao;
+        public List<double> preco;
 
         public TestesProduto()
         {
