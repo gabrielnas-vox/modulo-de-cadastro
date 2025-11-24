@@ -25,7 +25,7 @@ TestesPedido testesPedido = new TestesPedido();
 // testesCliente.testarCadastroFracasso();
 // testesCliente.testarCpfInvalido();
 // testesPedido.testarCadastroFracasso();
-testesPedido.testarDataPassada();
+// testesPedido.testarDataPassada();
 
 int opcao;
 
@@ -79,6 +79,9 @@ while(true)
             break;
         case 9:
             menu.deletarProduto();
+            break;
+        default:
+            Console.WriteLine("Opção inválida. Selecione uma opção de 1 a 9");
             break;
     }
 }
