@@ -1,10 +1,5 @@
 using Fase5.Classes;
 using Fase5.Records;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fase5.Services
 {
@@ -69,7 +64,6 @@ namespace Fase5.Services
                 {
                     Console.WriteLine("Informações inválidas. Por favor, tente novamente.");
                 }
-
 
                 if (dadosCadastro.Email != null)
                 {
