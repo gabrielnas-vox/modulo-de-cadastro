@@ -277,10 +277,12 @@ namespace Fase5.Services
 
         public void deletarProduto()
         {
+            int opcao;
+
             if(estaLogado)
             {
                 Console.WriteLine("Deseja deletar produto por ID (1) ou por nome (2): ");
-                int opcao = int.Parse(Console.ReadLine());
+                opcao = int.Parse(Console.ReadLine());
 
                 switch (opcao)
                 {
@@ -295,6 +297,9 @@ namespace Fase5.Services
                         string nome = Console.ReadLine();
 
                         funcoesProduto.DeletarProdutoPorNome(produtosCadastrados, nome);
+                        break;
+                    default:
+                        Console.WriteLine("Opção inválida. Selecione 1 ou 2.");
                         break;
                 }
             } else
