@@ -39,6 +39,7 @@ namespace Fase5.Services
         string categoria;
         string descricao;
         double preco;
+        Produto produto;
 
         // Variáveis para cadastro do PEDIDO
         int clienteQueComprou;
@@ -158,16 +159,13 @@ namespace Fase5.Services
                 Console.WriteLine("Informe o preço do produto: ");
                 preco = double.Parse(Console.ReadLine());
 
-                if(!string.IsNullOrWhiteSpace(nome) && quantidadeEstoque > 0 && !string.IsNullOrWhiteSpace(categoria) && preco > 0)
+                this.produto = funcoesProduto.CriarProduto(nome, quantidadeEstoque, categoria, descricao, preco);
+
+                if(produto != null)
                 {
-                    produtosCadastrados.Add(
-                    funcoesProduto.CriarProduto(nome, quantidadeEstoque, categoria, descricao, preco)
-                );
-                } else
-                {
-                    Console.WriteLine("Informações inválidas. Por favor, tente novamente.");
+                    produtosCadastrados.Add(this.produto);
+                    Console.WriteLine("Produto cadastrado com sucesso!");
                 }
-                
             } else
             {
                 Console.WriteLine("Você precisa estar logado para cadastrar um produto.");

@@ -14,7 +14,7 @@ namespace Fase5.Services
         [TestMethod]
         public Produto CriarProduto(string nome, int quantidadeEstoque, string categoria, string descricao, double preco)
         {
-            if (nome == null || categoria == null || descricao == null)
+            if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(categoria) || string.IsNullOrWhiteSpace(descricao))
             {
                 Console.WriteLine("Por favor, preencha todos os campos para cadastrar o produto em sistema");
                 return null;
