@@ -32,6 +32,7 @@ namespace Fase5.Services
         // Variáveis para cadastro do CLIENTE
         string endereco;
         string cpf;
+        Cliente cliente;
 
         // Variáveis para cadastro do PRODUTO
         int quantidadeEstoque;
@@ -125,15 +126,12 @@ namespace Fase5.Services
                 Console.WriteLine("Qual é o CPF do cliente: ");
                 this.cpf = Console.ReadLine();
 
-                if(!string.IsNullOrWhiteSpace(nome) && !string.IsNullOrWhiteSpace(endereco) && !string.IsNullOrWhiteSpace(cpf)) 
+                cliente = funcoesCliente.CadastrarCliente(this.nome, this.endereco, this.cpf);
+
+                if (cliente != null) 
                 {
-                    clientesCadastrados.Add(
-                    funcoesCliente.CadastrarCliente(this.nome, this.endereco, this.cpf)
-                    );
+                    clientesCadastrados.Add(cliente);
                     Console.WriteLine("Cliente novo cadastrado!");
-                } else
-                {
-                    Console.WriteLine("Necessário que todos os campos sejam preenchidos. Por favor, tente novamente.");
                 }
             } else
             {

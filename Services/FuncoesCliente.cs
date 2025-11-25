@@ -13,7 +13,7 @@ namespace Fase5.Services
 
         public Cliente CadastrarCliente(string nome, string endereco, string cpf)
         {
-            if(nome == null || endereco == null || cpf == null)
+            if(string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(endereco) || string.IsNullOrWhiteSpace(cpf))
             {
                 Console.WriteLine("Por favor, preencha todas as informações de cadastro do cliente.");
                 return null;
